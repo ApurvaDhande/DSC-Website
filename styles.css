@@ -1,0 +1,741 @@
+/* Color Variables */
+:root {
+    --red: #DB4437;
+    --blue: #4285F4;
+    --yellow: #F4B400;
+    --green: #0F9D58;
+    --dark-bg: #0a0a0a;
+    --light-gray: #e5e5e5;
+    --neutral-gray: #b3b3b3;
+    --darker-gray: #141414;
+    --hover-gray: #2b2b2b;
+    --orange: #f97316;
+}
+
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: var(--dark-bg);
+    color: var(--light-gray);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    scroll-behavior: smooth;
+}
+
+p{
+    margin-top: 7px;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--light-gray);
+}
+
+
+.brand-dot {
+    width: 10px;
+    height: 10px;
+    background-color: var(--yellow);
+    border-radius: 50%;
+}
+
+/* Navbar */
+nav {
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--darker-gray);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    width: 100%;
+  }
+/* Nav links for desktop view */
+.nav-links {
+    display: flex;
+    gap: 0.3rem;
+}
+
+/* Basic styling for links */
+.nav-links a {
+    text-decoration: none;
+    color: var(--light-gray);
+    transition: color 0.3s ease;
+    padding: 0.5rem 1rem;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+    color: var(--yellow);
+}
+
+.nav-toggle {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0.5rem;
+  }
+
+
+/* Custom hamburger icon using CSS */
+.hamburger {
+    width: 24px;
+    height: 20px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+.hamburger span {
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: var(--light-gray);
+    transition: all 0.3s ease;
+  }
+
+.hamburger.active span:nth-child(1) {
+    transform: translateY(9px) rotate(45deg);
+  }
+
+  .hamburger.active span:nth-child(2) {
+    opacity: 0;
+  }
+
+  .hamburger.active span:nth-child(3) {
+    transform: translateY(-9px) rotate(-45deg);
+  }
+
+
+
+/* Add indents to lists */
+ul {
+    list-style-type: disc;
+    margin-left: 20px;
+    /* Indent for main list */
+    padding-left: 20px;
+}
+
+ul ul {
+    list-style-type: circle;
+    margin-left: 40px;
+    /* Indent for nested list */
+    padding-left: 20px;
+}
+
+ul ul li {
+    margin-bottom: 0.5rem;
+    /* Add some space between nested list items */
+}
+
+ul li {
+    margin-bottom: 1rem;
+    /* Add space between main list items */
+}
+
+
+/* Main Content */
+main {
+    max-width: 1400px;
+    margin: 2rem auto;
+    padding: 10rem 2rem;
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+    flex: 1;
+    margin-bottom: 7rem;
+}
+
+.content {
+    animation: fadeInUp 1s ease-in-out;
+}
+
+.profile-image {
+    width: 100%;
+    /* Set width to 100% of the parent */
+    max-width: 550px;
+    /* Maximum width of the image */
+    height: auto;
+    /* Allow the height to adjust based on the width to maintain aspect ratio */
+    background-color: transparent;
+    display: flex;
+    justify-content: center;
+    /* Ensure the image is centered */
+    align-items: center;
+    margin: 0 auto;
+    /* Center the image horizontally */
+    animation: fadeInLeft 1s ease-in-out;
+}
+
+.profile-image img {
+    width: 100%;
+    /* Ensure the image scales down without being cropped */
+    height: auto;
+    /* Maintain the aspect ratio */
+    object-fit: contain;
+    /* Ensure the entire image fits inside the container without being cropped */
+}
+
+.content h1 {
+    font-size: 6rem;
+    margin-bottom: 1rem;
+    background: linear-gradient(to right, var(--red), var(--blue), var(--yellow), var(--green));
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.about-section {
+    margin-bottom: 2rem;
+    color: var(--neutral-gray);
+    animation: fadeInUp 1.2s ease-in-out;
+}
+
+.about-section p{
+    max-width: 50rem;
+}
+
+.vnm{
+    display: flex;
+    flex-direction: row;
+    gap: 4rem;
+}
+
+
+
+.vnm p{
+    margin-top: 1rem;
+    text-align: justify;
+    color: #b3b3b3;
+}
+
+.newsection{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 3rem 10%;
+    background-color: var(--dark-bg);
+    position: relative;
+    overflow: hidden;
+    flex-direction: column;
+    align-items: center;
+}
+
+.newsection h2{
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: 700;
+    background: linear-gradient(to right, var(--red),  var(--yellow));
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 1.5rem;
+    letter-spacing: 1px;
+    margin-bottom: 2rem;
+}
+
+.buttons {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    animation: fadeInUp 1.4s ease-in-out;
+}
+
+.button {
+    padding: 1rem 2rem;
+    border-radius: 50px;
+    border: none;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.button:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.button.resume {
+    background: linear-gradient(45deg, var(--yellow), var(--orange));
+    color: var(--dark-bg);
+}
+
+.button.projects {
+    background-color: var(--blue);
+    color: var(--light-gray);
+}
+
+.button.contact {
+    background-color: var(--darker-gray);
+    color: var(--light-gray);
+    border: 2px solid var(--yellow);
+}
+
+.button.contact:hover {
+    background-color: var(--yellow);
+    color: var(--dark-bg);
+}
+
+/* New Section */
+.new-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 3rem 15%;
+    background-color: var(--dark-bg);
+    position: relative;
+    overflow: hidden;
+    flex-direction: row;
+}
+
+.new-section .image-content+.text-content {
+    flex-direction: row-reverse;
+}
+
+.new-section .text-content {
+    flex: 2;
+    max-width: 60%;
+    color: var(--light-gray);
+    padding-right: 2rem;
+}
+
+.text-content h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    background: linear-gradient(to right, var(--red), var(--blue), var(--yellow), var(--green));
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 1.5rem;
+    letter-spacing: 1px;
+}
+
+.text-content h3 {
+    font-size: 1.5rem;
+    color: #ffffff;
+    /* White color for domain titles */
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+
+.new-section .image-content {
+    flex: 1;
+    max-width: 35%;
+    text-align: center;
+}
+
+.new-section .image-content img {
+    max-width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease;
+}
+
+.new-section .image-content img:hover {
+    transform: scale(1.05);
+}
+
+.new-section .cta-button {
+    display: inline-block;
+    margin-top: 1.5rem;
+    padding: 0.8rem 2rem;
+    background-color: var(--yellow);
+    color: var(--dark-bg);
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    font-size: 1.1rem;
+    transition: background-color 0.3s ease;
+}
+
+.new-section .cta-button:hover {
+    background-color: #e0a400;
+}
+
+/* Domains Section */
+.domain-section {
+    padding: 3rem 2rem;
+    background-color: var(--dark-bg);
+    /* Dark background */
+    text-align: center;
+}
+
+.domain-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 2.5rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    background: linear-gradient(90deg, #ff7e5f, #feb47b);
+    /* Gradient heading color */
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.domain-cards {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+}
+
+.domain-card {
+    background-color: #1e1e1e;
+    /* Dark background for cards */
+    padding: 2rem;
+    border-radius: 12px;
+    width: 300px;
+    text-align: left;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.domain-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+}
+
+.domain-card img {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 1.5rem;
+}
+
+.domain-card h3 {
+    font-size: 1.5rem;
+    color: #ffffff;
+    /* White color for domain titles */
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.domain-card p {
+    font-size: 1rem;
+    color: #cccccc;
+    /* Light gray for the text */
+    line-height: 1.6;
+}
+
+.campus-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 3rem 15%;
+    background-color: var(--dark-bg);
+    position: relative;
+    overflow: hidden;
+    flex-direction: column;
+    /* Ensure content is on the left, image on the right */
+}
+
+.campus-section h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    background: linear-gradient(to right, var(--red), var(--blue), var(--yellow), var(--green));
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 1.5rem;
+    letter-spacing: 1px;
+    text-align: left;
+}
+
+.campus-content {
+    display: flex;
+    flex-direction: column;
+    flex: 2;
+    /* max-width: 60%; */
+    color: var(--light-gray);
+    padding-right: 2rem;
+    animation: fadeInLeft 1s ease-in-out;
+}
+
+.campus-content h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--light-gray);
+    margin-bottom: 1rem;
+    margin-top: 2rem;
+}
+
+.campus-content p,
+li,
+ul {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: var(--neutral-gray);
+}
+
+.campus-image {
+    margin-top: 1rem;
+    flex: 1;
+    max-width: 80%;
+    display: flex;
+    flex-wrap: wrap;
+    /* Allows for multiple images */
+    gap: 1rem;
+    /* Adds space between multiple images */
+    justify-content: flex-start;
+    /* Aligns images to the right */
+    animation: fadeInRight 1s ease-in-out;
+}
+
+.campus-image img {
+    max-width: 100%;
+    max-height: 500px;
+    border-radius: 8px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease;
+}
+
+.campus-image img:hover {
+    transform: scale(1.05);
+}
+
+/* Campus Logos Section */
+.logos-section {
+    padding: 3rem 15%;
+    background-color: var(--darker-gray);
+    /* Use your existing color variables */
+    text-align: center;
+}
+
+.logos-section h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    background: linear-gradient(to right, var(--red), var(--blue), var(--yellow), var(--green));
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 2rem;
+}
+
+.logos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 2rem;
+    justify-items: center;
+    align-items: center;
+}
+
+.logo-item img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease;
+}
+
+.logo-item img:hover {
+    transform: scale(1.05);
+}
+
+
+
+/* Footer */
+footer {
+    background-color: var(--darker-gray);
+    padding: 1rem;
+    margin-top: auto;
+    border-top: 1px solid var(--hover-gray);
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.contact-info {
+    display: flex;
+    gap: 2rem;
+    color: var(--neutral-gray);
+}
+
+.social-links a {
+    color: var(--neutral-gray);
+    text-decoration: none;
+    margin-left: 1rem;
+    transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+    color: var(--yellow);
+}
+
+/* Animations */
+@keyframes fadeInLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-30px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeInRight {
+    0% {
+        opacity: 0;
+        transform: translateX(30px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    main {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .nav-toggle {
+        display: block;
+      }
+
+      .nav-links {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: var(--darker-gray);
+        flex-direction: column;
+        align-items: center;
+        padding: 1rem;
+        gap: 1rem;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+        opacity: 0;
+        transform: translateY(-20px);
+        transition: all 0.3s ease;
+      }
+
+      .nav-links.active {
+        display: flex;
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      .nav-links a {
+        width: 100%;
+        text-align: center;
+        padding: 0.75rem;
+      }
+
+
+    .footer-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .profile-image {
+        width: 300px;
+        height: 300px;
+    }
+
+    .content h1 {
+        font-size: 3rem;
+    }
+
+    .buttons {
+        justify-content: center;
+        gap: 1rem;
+        flex-direction: column;
+    }
+
+    .buttons .button {
+        width: 100%;
+    }
+
+    .new-section {
+        flex-direction: column;
+        padding: 2rem 5%;
+    }
+
+    .new-section .text-content,
+    .new-section .image-content {
+        max-width: 100%;
+    }
+
+    .image-content {
+        display: none;
+    }
+
+    .domain-cards {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .domain-card {
+        width: 100%;
+        margin-bottom: 1.5rem;
+    }
+
+    .campus-section {
+        flex-direction: column;
+        padding: 2rem 5%;
+    }
+
+    .campus-content,
+    .campus-image {
+        max-width: 100%;
+    }
+
+    .campus-image {
+        justify-content: center;
+        margin-top: 2rem;
+    }
+}
+
+@media (min-width: 1400px) {
+    main {
+        max-width: 1400px;
+    }
+
+    .profile-image {
+        width: 450px;
+        height: 450px;
+    }
+
+    .content h1 {
+        font-size: 6rem;
+    }
+}

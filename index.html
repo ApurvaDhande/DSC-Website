@@ -1,45 +1,114 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DSC Sanjivani</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Home</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
-    <header class="banner">
-        <div class="logo-container floating">
-            <img src="https://i.imgur.com/hRgEyIt.jpeg" alt="DSC Logo" class="logo">
+    <nav>
+        <div class="brand">
+            <div class="brand-dot"></div>
+            <span>Developers Student Club</span>
         </div>
-        <div class="image-container floating-slow">
-            <img src="https://i.imgur.com/OE74gqr.png" alt="Club Image" class="club-image">
+        <button class="nav-toggle" aria-label="Toggle navigation">
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </button>
+        <div class="nav-links">
+            <a href="#">About Us</a>
+            <a href="#">Projects</a>
+            <a href="#">More</a>
+            <a href="#">Contact Us</a>
         </div>
-    </header>
-
-    <section class="about-dsc">
-        <h2 class="floating">About DSC</h2>
-        <p>Developer Student Club at Sanjivani K.B.P. Polytechnic is a community that helps students grow as developers through workshops, hackathons, and real-world projects.</p>
-        <p>Learning technical skills and developing real-world use of projects.</p>
-        <a href="about.html" class="cta-button floating-slow">Learn More</a>
-    </section>
-
-    <section class="highlights">
-        <h2 class="floating">Highlights</h2>
-        <div class="button-group">
-            <a href="https://drive.google.com/drive/folders/1yr0aisYW9tj-OBb_UQerHvv6xxcodruN?usp=sharing" class="modern-button floating">Events</a>
-            <a href="https://drive.google.com/drive/folders/1ThlPhNYrBBX7cBJ72JucLVisvN4DT84T?usp=sharing" class="modern-button floating-slow">Workshops</a>
-            <a href="https://drive.google.com/drive/folders/15tQdGcAUOq37UwpFxPnigCKsjQpRb73T?usp=sharing" class="modern-button floating">Hackathons</a>
+    </nav>
+    <main>
+        <div class="content">
+            <h1>Developer Students Club</h1>
+            <div class="about-section">
+                <h2>Empowering Developers, Building the Future</h2>
+                <p>Developer Student Club at Sanjivani K.B.P. Polytechnic is a community that helps students grow as
+                    developers through workshops, hackathons, and real-world projects. Learning technical skills and
+                    developing real-world use of projects.</p>
+                <!-- <div class="profile-image">
+                        <img src="assets/DSC logo.png" alt="Developer Student Club Logo">
+                    </div> -->
+            </div>
+            <div class="buttons">
+                <button class="button resume" onclick="scrollToKnowMore()">Know More</button>
+            </div>
+    </main>
+    <section class="newsection">
+            <h2>About Us</h2>
+            <div class="vnm">
+                <div class="vision">
+                    <h3>Vision</h3>
+                    <p> Our focus is on imparting the knowledge and traning which should enable students to harmonize
+                        theory with pratice, concept with application, and problems with solutions. It will prepare them
+                        to apply engineering principles, practices and processes to design, develop, deploy and maintain
+                        software systems, and growth in development and technical skills.</p>
+                </div>
+                <div class="mission">
+                    <h3>Mission</h3>
+                    <p>Our mission is to develop technology based solutions, products that provide both the means and
+                        methods for faster working, and better performance and to achieve more. The technologies we
+                        develop provide users the control and functionality needed to be more efficient and we develop
+                        the project for real-world use.</p>
+                </div>
+            </div>
         </div>
     </section>
-
-    <section class="members-say-section">
-        <h2 class="floating">What Our Members Say</h2>
-        <p>"Being a part of DSC has helped me develop both personally and professionally!" - Alumni</p>
-        <p>"Great workshops and learning experiences!" - Member</p>
-    </section>
-
-    <footer>
-        <p>&copy; 2025 Developer Student Club. All Rights Reserved.</p>
-    </footer>
 </body>
+
 </html>
+<!-- <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>DSC Sanjivani</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <header class="banner">
+            <div class="logo-container floating">
+                <img src="https://i.imgur.com/hRgEyIt.jpeg" alt="DSC Logo" class="logo">
+            </div>
+            <div class="image-container floating-slow">
+                <img src="https://i.imgur.com/OE74gqr.png" alt="Club Image" class="club-image">
+            </div>
+        </header>
+    
+        <section class="about-dsc">
+            <h2 class="floating">About DSC</h2>
+            <p>Developer Student Club at Sanjivani K.B.P. Polytechnic is a community that helps students grow as developers through workshops, hackathons, and real-world projects.</p>
+            <p>Learning technical skills and developing real-world use of projects.</p>
+            <a href="about.html" class="cta-button floating-slow">Learn More</a>
+        </section>
+    
+        <section class="highlights">
+            <h2 class="floating">Highlights</h2>
+            <div class="button-group">
+                <a href="https://drive.google.com/drive/folders/1yr0aisYW9tj-OBb_UQerHvv6xxcodruN?usp=sharing" class="modern-button floating">Events</a>
+                <a href="https://drive.google.com/drive/folders/1ThlPhNYrBBX7cBJ72JucLVisvN4DT84T?usp=sharing" class="modern-button floating-slow">Workshops</a>
+                <a href="https://drive.google.com/drive/folders/15tQdGcAUOq37UwpFxPnigCKsjQpRb73T?usp=sharing" class="modern-button floating">Hackathons</a>
+            </div>
+        </section>
+    
+        <section class="members-say-section">
+            <h2 class="floating">What Our Members Say</h2>
+            <p>"Being a part of DSC has helped me develop both personally and professionally!" - Alumni</p>
+            <p>"Great workshops and learning experiences!" - Member</p>
+        </section>
+    
+        <footer>
+            <p>&copy; 2025 Developer Student Club. All Rights Reserved.</p>
+        </footer>
+    </body>
+    </html> -->
