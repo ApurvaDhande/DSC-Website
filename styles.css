@@ -151,7 +151,7 @@ ul li {
 main {
     max-width: 1400px;
     margin: 2rem auto;
-    padding: 10rem 2rem;
+    padding: 2rem 2rem;
     display: flex;
     align-items: center;
     gap: 4rem;
@@ -246,6 +246,77 @@ main {
     letter-spacing: 1px;
     margin-bottom: 2rem;
 }
+
+/* From Uiverse.io by satyamchaudharydev */ 
+/* This card is inspired from this - https://georgefrancis.dev/ */
+
+.card {
+    --border-radius: 0.75rem;
+    --primary-color: #b3b3b3; /* neutral-gray */
+    --secondary-color: #e5e5e5; /* light-gray */
+    width: 210px;
+    font-family: "Arial";
+    padding: 1rem;
+    cursor: pointer;
+    border-radius: var(--border-radius);
+    background: #141414; /* darker-gray */
+    box-shadow: 0px 8px 16px 0px rgb(0 0 0 / 3%);
+    position: relative;
+    margin: 10px;
+  }
+  
+  .card > * + * {
+    margin-top: 1.1em;
+  }
+  
+  .card .card__content {
+    color: var(--secondary-color);
+    font-size: 0.86rem;
+  }
+  
+  .card .card__title {
+    padding: 0;
+    font-size: 1.3rem;
+    font-weight: bold;
+  }
+  
+  .card .card__date {
+    color: #b3b3b3; /* neutral-gray */
+    font-size: 0.8rem;
+  }
+  
+  .card .card__arrow {
+    position: absolute;
+    background: var(--primary-color);
+    padding: 0.4rem;
+    border-top-left-radius: var(--border-radius);
+    border-bottom-right-radius: var(--border-radius);
+    bottom: 0;
+    right: 0;
+    transition: 0.2s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .card svg {
+    transition: 0.2s;
+  }
+  
+  /* hover */
+  .card:hover .card__title {
+    color: var(--primary-color);
+    text-decoration: underline;
+  }
+  
+  .card:hover .card__arrow {
+    background: #0a0a0a; /* dark-bg */
+  }
+  
+  .card:hover .card__arrow svg {
+    transform: translateX(3px);
+  }
+  
 
 .buttons {
     display: flex;
