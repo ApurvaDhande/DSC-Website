@@ -1,0 +1,143 @@
+   /* Color Variables */
+   :root {
+    --red: #DB4437;
+    --blue: #4285F4;
+    --yellow: #F4B400;
+    --green: #0F9D58;
+    --dark-bg: #0a0a0a;
+    --light-gray: #e5e5e5;
+    --neutral-gray: #b3b3b3;
+    --darker-gray: #141414;
+    --hover-gray: #2b2b2b;
+    --orange: #f97316;
+  }  
+  
+  
+  /* layout code */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--dark-bg);
+    color: var(--light-gray);
+}
+
+.topic-name {
+    font-size: 2.5rem;
+    font-weight: 700;
+    background: linear-gradient(to right, var(--yellow), var(--red), var(--blue), var(--orange));
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 1.5rem;
+    letter-spacing: 1px;
+    text-align: center;
+  }
+
+.container {
+    display: grid;
+     justify-content: center;
+    align-items: center;
+    margin-left:75px ;  
+    grid-template-columns: repeat(3, 1fr);
+     grid-template-rows: repeat(2, 1fr); /* to add more photos increase tne no. */
+    gap: 10px; 
+     width: 90%;  
+}
+
+.box {
+    position: relative;
+    background-color: rgb(10, 0, 0);
+    
+    border: 2px solid #1e1e1e;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.box:hover {
+    transform: scale(1.05);
+}
+
+.slider {
+    position: relative;
+    width: 100%;
+    height: 300px; /* Set a fixed height for the slider */
+    overflow: hidden;
+}
+
+.slider img {
+   min-width: 100%;
+   
+    max-height: 300px;
+    display: none; /* Hide all images by default */
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: opacity 1s ease;
+}
+
+.slider img.active {
+    display: block; /* Show the active image */
+    opacity: 1;
+}
+
+button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(255, 255, 255, 0.7);
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 50px;
+    font-size: 18px;
+}
+
+.prev {
+    left: 10px }
+
+.next {
+    right: 10px;
+}
+
+/* Media Queries for Responsiveness */
+
+/* For medium-sized devices like tablets */
+@media (max-width: 768px) {
+    .container {
+        grid-template-columns: repeat(1, 1fr); /* 2 columns for medium screens */
+        grid-template-rows: repeat(3, 1fr); /* Keep 3 rows */
+        align-items: center;
+    }
+    
+    .slider {
+        height: 300px; /* Slightly smaller slider height */
+    }
+
+    button {
+        font-size: 16px; /* Smaller button text */
+        padding: 8px;    /* Smaller button padding */
+    }
+}
+
+/* For small devices like mobile phones */
+@media (max-width: 480px) {
+    .container {
+        grid-template-columns: 1fr; /* 1 column for mobile screens */
+        grid-template-rows: repeat(3, 1fr); /* Keep 3 rows */
+        margin-left: 0; /* Remove left margin */
+    }
+    
+    .slider {
+        height: 200px; /* Even smaller slider height */
+    }
+
+    button {
+        font-size: 14px; /* Smaller button text */
+        padding: 6px;    /* Smaller button padding */
+    }
+}
