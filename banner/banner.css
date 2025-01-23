@@ -1,0 +1,275 @@
+   /* Color Variables */
+   :root {
+    --red: #DB4437;
+    --blue: #4285F4;
+    --yellow: #F4B400;
+    --green: #0F9D58;
+    --dark-bg: #0a0a0a;
+    --light-gray: #e5e5e5;
+    --neutral-gray: #b3b3b3;
+    --darker-gray: #141414;
+    --hover-gray: #2b2b2b;
+    --orange: #f97316;
+  }
+  
+body {
+  background-color: black;
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+}
+
+.heading1,
+.heading2,
+.heading3 {
+  font-size: 2.5rem;
+    font-weight: 700;
+    background: linear-gradient(to right, var(--yellow), var(--blue), var(--red), var(--green));
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 1.5rem;
+    letter-spacing: 1px;
+    text-align: center;
+}
+
+.heading1,
+.heading2,
+.heading3 {
+  display: flex;
+  font-weight: 600;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.role {
+  font-size: 25px;
+  color: #ffffff;
+  margin-top: 3px;
+  margin-bottom: 3px;
+  font-weight: 700;
+}
+
+/* Common Container Styles */
+.team24-container,
+.team23-container,
+.team22-container,
+.team21-container {
+  width: 90%;
+  display: flex; /* Changed to flex to enable horizontal layout */
+  flex-direction: row; /* Aligns items in a horizontal row */
+  justify-content: space-between; /* Creates space between the image and team members */
+  font-weight: 500;
+  color: #cccccc;
+  border-radius: 60px;
+  border-style: solid;
+  border-color: white;
+  padding: 20px;
+  margin-bottom: 40px;
+  align-items: center; 
+}
+
+.team23-container,
+.team24-container,
+.team22-container,
+.team21-container {
+  height: auto;
+  border-left: 50px;
+  border-right: 50px;
+  border-bottom: 50px;
+  border-top-right-radius: 75px;
+  border-top-left-radius: 85px;
+}
+
+/* Heading Text Styles */
+.heading1 h2,
+.heading2 h2,
+.heading3 h2 {
+  font-size: 40px;
+  color: rgb(83, 83, 255);
+  margin-top: 0;
+}
+
+/* Image Container Styles */
+.img24, .img23, .img22, .img21 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 60%; /* Adjust width to leave space for team members */
+  margin-top: 25px;
+  margin-left: 30px;
+}
+
+.img1, .img2, .img3, .img4 {
+  width: 100%;
+  height: auto;
+ 
+  border-style: groove;
+  border-radius: 55px;
+ 
+}
+
+/* Team Members Container Styles */
+.team24,
+.team23,
+.team22,
+.team21 {
+  display: flex;
+  flex-direction: column; /* Stack team members vertically */
+  justify-content: center;
+  align-items: flex-start; /* Align items to the left */
+  margin-right: 10px;
+ font-size: 20px;
+  margin-bottom: 100px;
+}
+
+
+.tech-members24, .tech-members23, .tech-members22, .tech-members21,
+.management-team24, .management-team23, .management-team22, .management-team21 {
+   display: flex; 
+  margin-left: 15px;
+  flex-wrap: wrap; /* Allows team members to wrap if needed */
+}
+
+/* Scroll Animation */
+@keyframes appear {
+  from {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.team24-container .team23-container .team22-container .team21-container {
+  animation: appear 1s ease-out;
+}
+
+
+
+/* Mobile Devices (up to 600px) */
+@media (max-width: 600px) {
+  .team24-container,
+  .team23-container,
+  .team22-container,
+  .team21-container {
+    display: flex;
+    flex-direction: column; /* Stack the image above the team members */
+    align-items: center; /* Center the items horizontally */
+    width: 100%;
+    padding: 10px;
+  }
+
+  .img24, .img23, .img22, .img21 {
+    width: 80%; /* Adjust image size for mobile */
+    margin-left: 0;
+    margin-top: 15px;
+  }
+
+  .team24, .team23, .team22, .team21 {
+    margin-left: 0;
+    margin-right: 0;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    font-size: 10px;
+  }
+
+  .tech-members24, .tech-members23, .tech-members22, .tech-members21,
+  .management-team24, .management-team23, .management-team22, .management-team21 {
+    flex-direction: column; /* Stack team members vertically on mobile */
+    align-items: center; /* Center the team members */
+    margin-left: 0;
+  }
+
+  .role {
+    font-size: 13px; /* Adjust role font size for mobile */
+  }
+
+  .heading1 h2, .heading2 h2, .heading3 h2 {
+    font-size: 10px; /* Adjust heading font size for mobile */
+    padding-top: 3px;
+  }
+}
+
+/* Tablets (600px to 900px) */
+@media (min-width: 600px) and (max-width: 900px) {
+  .team24-container,
+  .team23-container,
+  .team22-container,
+  .team21-container {
+    flex-direction: column; /* Keep items up and down but adjust for tablet screens */
+    justify-content: space-between;
+    width: 100%;
+    padding: 5px;
+  }
+
+  .img24, .img23, .img22, .img21 {
+    width: 90%; /* Adjust image size for tablets */
+    margin-left: 10px;
+    align-items: center;
+    text-align: center;
+    margin-left: 30px;
+  }
+
+  .team24, .team23, .team22, .team21 {
+    margin-left: 20%;
+    margin-right: 0;
+    margin-bottom: 10px;
+    font-size: 17px;
+   margin-top:20PX ;
+  }
+
+  .tech-members24, .tech-members23, .tech-members22, .tech-members21,
+  .management-team24, .management-team23, .management-team22, .management-team21 {
+    flex-wrap: wrap; /* Allow team members to wrap if necessary */
+
+  }
+
+  .role {
+    font-size: 20px; /* Adjust role font size for tablets */
+  }
+
+  .heading1 h2, .heading2 h2, .heading3 h2 {
+    font-size: 35px; /* Adjust heading font size for tablets */
+  }
+}
+
+/* Desktops (900px and up) */
+@media (min-width: 900px) {
+  .team24-container,
+  .team23-container,
+  .team22-container,
+  .team21-container {
+    flex-direction: row; /* Keep items side by side on larger screens */
+    justify-content: space-between;
+    width: 90%;
+    padding: 20px;
+  }
+
+  .img24, .img23, .img22, .img21 {
+    width: 60%; /* Adjust image size for larger screens */
+    margin-left: 30px;
+  }
+
+  .team24, .team23, .team22, .team21 {
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-bottom: 100px;
+  }
+
+  .tech-members24, .tech-members23, .tech-members22, .tech-members21,
+  .management-team24, .management-team23, .management-team22, .management-team21 {
+    flex-wrap: wrap; /* Keep team members wrapped for large screens */
+  }
+
+  .role {
+    font-size: 25px; /* Standard font size for larger screens */
+  }
+
+  .heading1 h2, .heading2 h2, .heading3 h2 {
+    font-size: 40px; /* Standard heading font size for larger screens */
+  }
+}
