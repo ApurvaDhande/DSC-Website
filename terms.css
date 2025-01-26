@@ -1,0 +1,147 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: black;
+  font-family: 'Poppins', sans-serif;
+  color: white;
+  padding: 0 20px;
+}
+
+h1 {
+  color: #0099ff; 
+  text-align: left;
+  font-size: 2.5em; 
+  margin-bottom: 20px; 
+}
+
+h2 {
+  color: #0099ff; 
+  text-align: left; 
+  margin-bottom: 10px; 
+  font-size: 1.8em; 
+}
+
+
+.container {
+  width: 80%; 
+  max-width: 900px; 
+  margin: 0 auto;
+  padding-top: 30px;
+}
+
+
+.term-container {
+  margin: 20px 0;
+  opacity: 0;
+  transform: translateY(50px);
+  animation: fadeInUp 1s ease-out forwards;
+}
+
+.term-container:nth-child(1) {
+  animation-delay: 0.2s;
+}
+
+.term-container:nth-child(2) {
+  animation-delay: 0.4s;
+}
+
+.term-container:nth-child(3) {
+  animation-delay: 0.6s;
+}
+
+.term-container:nth-child(4) {
+  animation-delay: 0.8s;
+}
+
+.term-container:nth-child(5) {
+  animation-delay: 1s;
+}
+
+.term-container:nth-child(6) {
+  animation-delay: 1.2s;
+}
+
+.term-container:nth-child(7) {
+  animation-delay: 1.4s;
+}
+
+.term-container:nth-child(8) {
+  animation-delay: 1.6s;
+}
+
+.term-container:nth-child(9) {
+  animation-delay: 1.8s;
+}
+
+.term-container:nth-child(10) {
+  animation-delay: 2s;
+}
+
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+.term-box {
+  background-color: #222;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+  margin-bottom: 20px;
+}
+
+.term-box h2 {
+  font-size: 1.6em;
+  color: #0099ff;
+  margin-bottom: 10px;
+}
+
+.term-box p {
+  font-size: 1.1em;
+  line-height: 1.6;
+  color: #ccc; 
+}
+
+
+a {
+  background: linear-gradient(to right, red, blue, green, yellow);
+  color: transparent;
+  background-clip: text;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+a:hover {
+  text-decoration: underline;
+  background:  #0099ff;
+  color: transparent;
+  background-clip: text;
+}
+
+
+footer {
+  text-align: center;
+  padding: 20px 0;
+  background-color: #222;
+}
+
+footer p {
+  color: #999;
+}
+
+footer a {
+  color: #0099ff;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
