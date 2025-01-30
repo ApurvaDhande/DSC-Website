@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Footer at Bottom</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html, body {
+            height: 100%;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .content {
+            flex: 1;
+            padding: 20px;
+        }
+
+        footer {
+            background-color: #000000; 
+            color: #ffffff;
+            padding: 40px 20px;
+        }
+
+        .footer-container {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            max-width: 1700px;
+            margin: 0 auto;
+        }
+
+        .footer-column {
+            flex: 1;
+            min-width: 200px;
+            margin: 10px 20px;
+        }
+
+        .footer-column h4 {
+            color: #0099ff;
+            margin-bottom: 15px;
+            font-size: 16px;
+        }
+
+        .footer-column ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .footer-column ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-column ul li a {
+            color: #ffffff;
+            text-decoration: none;
+            font-size: 14px;
+        }
+
+        .footer-column ul li a:hover {
+            text-decoration: underline;
+            color: #0099ff;
+        }
+
+        .footer-social {
+            display: flex;
+            gap: 10px;
+            margin-top: 20px;
+        }
+
+        .footer-social a {
+            display: inline-block;
+            color: #ffffff;
+            font-size: 18px;
+            width: 35px;
+            height: 35px;
+            text-align: center;
+            line-height: 35px;
+            background-color: #0099ff;
+            border-radius: 50%;
+            text-decoration: none;
+        }
+
+        .footer-social a:hover {
+            background-color: #0099ff;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            margin-top: 30px;
+            border-top: 1px solid #4a5a6a;
+            padding-top: 20px;
+            font-size: 14px;
+            color: #b0b0b0;
+        }
+
+        .footer-bottom a {
+            color: #0099ff;
+            text-decoration: none;
+        }
+
+        .footer-bottom a:hover {
+            text-decoration: underline;
+        }
+
+        .contact-info {
+            color: #b0b0b0;
+            font-size: 14px;
+            margin-top: 20px;
+        }
+        
+        .contact-info a {
+            color: #0099ff;
+            text-decoration: none;
+        }
+
+        .contact-info a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="content">
+        <h1>Welcome to Our Website</h1>
+        
+    </div>
+
+    <footer>
+        <div class="footer-container">
+          
+            <div class="footer-column">
+                <h4>Home</h4>
+                <ul>
+                    <li><a href="#">Home Page</a></li>
+                </ul>
+            </div>
+
+          
+            <div class="footer-column">
+                <h4>About Us</h4>
+                <ul>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#events">Events</a></li>
+                </ul>
+            </div>
+
+         
+            <div class="footer-column">
+                <h4>More</h4>
+                <ul>
+                    <li><a href="#privacy-policy">Privacy Policy</a></li>
+                    <li><a href="#terms-conditions">Terms & Conditions</a></li>
+                </ul>
+            </div>
+
+          
+            <div class="footer-column">
+                <h4>Follow Us</h4>
+                <div class="footer-social">
+                    <a href="" title="Facebook">F</a>
+                    
+                    <a href="https://www.linkedin.com/company/sanjivani-developer-student-club/" title="LinkedIn">L</a>
+                    
+                    <a href="#twitter" title="Twitter">T</a>
+                    <a href="https://www.instagram.com/sanjivani.dsc/" title="Instagram">I</a>
+                </div>
+            </div>
+        </div>
+
+        
+        <div class="contact-info">
+            <p>Contact us: <a href="contact@dsc.sanjivanikbpcm.com">contact@yourwebsite.com</a> | Call us: <a href="tel:+1234567890">+123 456 7890</a></p>
+        </div>
+
+       
+        <div class="footer-bottom">
+            <p>Powered by <a href="#wordpress">WordPress</a> | <a href="#pressable">Host with Pressable</a></p>
+        </div>
+    </footer>
+</body>
+</html>
