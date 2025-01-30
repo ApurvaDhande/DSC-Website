@@ -21,6 +21,7 @@
 body {
     background-color: var(--dark-bg);
     color: var(--light-gray);
+    padding-top: 80px;
 }
 
 .topic-name {
@@ -141,3 +142,111 @@ button {
         padding: 6px;    /* Smaller button padding */
     }
 }
+
+
+
+
+
+
+
+
+
+.dropdown .dropdown-btn {
+    cursor: pointer;
+    display: inline-block;
+    padding: 0.5rem;
+}
+
+/* Hide dropdown menu initially */
+.dropdown-menu {
+    position: absolute;
+    top: 2.5rem;
+    left: 0;
+    background: linear-gradient(135deg, #101020, #1a1a2e);
+    padding: 0.5rem 0;
+    border-radius: 8px;
+    display: none; /* Hidden by default */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);
+    animation: dropdownSlide 0.4s ease-in-out;
+    min-width: 180px;
+    z-index: 1000;
+}
+
+/* Ensure dropdown items are properly spaced */
+.dropdown-menu li {
+    margin: 0;
+}
+
+/* Dropdown link styling */
+.dropdown-menu a {
+    display: block;
+    padding: 0.5rem 1rem;
+    color: #fff;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+}
+
+/* Hover effect for dropdown links */
+.dropdown-menu a:hover {
+    background-color: #1f4068;
+    color: #ffd700;
+    border-radius: 4px;
+}
+
+/* Animation for dropdown */
+@keyframes dropdownSlide {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.navbar {
+    background: linear-gradient(90deg, #1a1a2e, #16213e, #0f3460);
+    color: #fff;
+    padding: 1rem;
+    font-family: 'Arial', sans-serif;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    position: fixed;         /* Fix the navbar at the top */
+    top: 0;                  /* Ensure it stays at the top */
+    left: 0;
+    width: 100%;   
+    z-index: 1000; /* Ensures it's above other content */
+}
+
+/* Add padding to body to prevent content from hiding behind navbar */
+
+
+
+/* Navbar list items */
+.navbar ul {
+    display: flex;
+    list-style: none;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar ul li {
+    position: relative;
+    margin: 0 1.5rem;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: #e0e0e0;
+    padding: 0.5rem;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+/* Hover effect with scale and color change */
+.navbar a:hover {
+    color: #ffd700;
+    transform: scale(1.1);
+}
+

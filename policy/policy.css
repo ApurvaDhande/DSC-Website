@@ -1,0 +1,287 @@
+*{
+	margin: 0px;
+	padding: 0px;
+	box-sizing: border-box;
+	
+}
+body {
+
+  background-color: black;
+  color: white;
+ 
+  
+  text-align: left; 
+  
+  padding-top: 80px;
+}
+
+
+.container {
+  width: 80%;
+  max-width: 1200px;
+  line-height: 1.6;
+  margin: 0 auto;
+  padding: 20px;
+  animation: slideIn 1.5s ease-in-out;
+}
+
+
+header {
+  background-color: #0D47A1;
+  padding: 20px 0;
+  text-align: left; 
+  border-bottom: 4px solid #BBDEFB;
+}
+
+header h1 {
+  font-size: 2.5em;
+  color: white;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+ 
+}
+
+
+main {
+  font-family: 'Arial', sans-serif;
+  padding: 40px 0;
+  animation: fadeIn 2s ease-in-out;
+}
+
+h1 {
+  font-size: 2.5em;
+  color: #1976D2;
+  margin-bottom: 20px;
+ }
+
+h3 {
+  color: #42A5F5;
+  font-size: 1.6em;
+  margin-top: 20px;
+  
+}
+
+ol, ul {
+  color: #B0BEC5;
+  margin-left: 40px;
+  opacity: 0;
+  animation: fadeInList 1s ease-in-out forwards;
+}
+
+li {
+  margin: 15px 0;
+  padding: 8px 0;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+li:hover {
+  transform: scale(1.05);
+  color: #00BCD4;
+}
+
+li:nth-child(odd) {
+  animation-delay: 0.5s;
+}
+
+li:nth-child(even) {
+  animation-delay: 0.8s;
+}
+
+
+p {
+  color: #CFD8DC;
+  font-size: 1.1em;
+  margin-bottom: 15px;
+  text-align: left; 
+}
+
+a {
+  color: #1976D2;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+a:hover {
+  color: #cdbb1c;
+  text-decoration: underline;
+  transition: color 0.3s ease;
+}
+
+
+footer {
+  background-color: #373839;
+  color: #78909C;
+  text-align: left; 
+  padding: 20px 0;
+  margin-top: 40px;
+  font-size: 1em;
+}
+
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes slideIn {
+  0% {
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes colorChange {
+  0% {
+    color: #1976D2;
+  }
+  50% {
+    color: #BBDEFB;
+  }
+  100% {
+    color: #1976D2;
+  }
+}
+
+@keyframes fadeInList {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+
+@media (max-width: 768px) {
+  .container {
+    width: 90%;
+  }
+
+  h1 {
+    font-size: 2em;
+  }
+
+  h3 {
+    font-size: 1.4em;
+  }
+
+  footer {
+    font-size: 0.9em;
+  }
+}
+
+
+
+
+
+
+
+.dropdown .dropdown-btn {
+  cursor: pointer;
+  display: inline-block;
+  padding: 0.5rem;
+}
+
+/* Hide dropdown menu initially */
+.dropdown-menu {
+  position: absolute;
+  top: 2.5rem;
+  left: 0;
+  background: linear-gradient(135deg, #101020, #1a1a2e);
+  padding: 0.5rem 0;
+  border-radius: 8px;
+  display: none; /* Hidden by default */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);
+  animation: dropdownSlide 0.4s ease-in-out;
+  min-width: 180px;
+  z-index: 1000;
+}
+
+/* Ensure dropdown items are properly spaced */
+.dropdown-menu li {
+  margin: 0;
+}
+
+/* Dropdown link styling */
+.dropdown-menu a {
+  display: block;
+  padding: 0.5rem 1rem;
+  color: #fff;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+}
+
+/* Hover effect for dropdown links */
+.dropdown-menu a:hover {
+  background-color: #1f4068;
+  color: #ffd700;
+  border-radius: 4px;
+}
+
+/* Animation for dropdown */
+@keyframes dropdownSlide {
+  from {
+      opacity: 0;
+      transform: translateY(-10px);
+  }
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+.navbar {
+  background: linear-gradient(90deg, #1a1a2e, #16213e, #0f3460);
+  color: #fff;
+  padding: 1rem;
+  font-family: 'Arial', sans-serif;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+  position: fixed;         /* Fix the navbar at the top */
+  top: 0;                  /* Ensure it stays at the top */
+  left: 0;
+  width: 100%;   
+  z-index: 1000; /* Ensures it's above other content */
+}
+
+/* Add padding to body to prevent content from hiding behind navbar */
+
+
+
+/* Navbar list items */
+.navbar ul {
+  display: flex;
+  list-style: none;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar ul li {
+  position: relative;
+  margin: 0 1.5rem;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: #e0e0e0;
+  padding: 0.5rem;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+/* Hover effect with scale and color change */
+.navbar a:hover {
+  color: #ffd700;
+  transform: scale(1.1);
+}
+
+
+

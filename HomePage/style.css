@@ -8,11 +8,13 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
     font-family: 'Poppins', sans-serif;
     background-color: #0A0A0A;
     color: #ffffff;
     text-align: center;
     line-height: 1.6;
+    padding-top: 60px; 
 }
 
 header {
@@ -62,79 +64,104 @@ header {
     box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
 }
 
-.navbar {
+/* Dropdown button styling */
+.dropdown .dropdown-btn {
+    cursor: pointer;
+    display: inline-block;
+    padding: 0.5rem;
+}
+
+/* Hide dropdown menu initially */
+.dropdown-menu {
     position: absolute;
-    top: 0;
-    right: 0;
-    background-color: #121212;
-    display: flex;
-    justify-content: flex-end;
-    padding: 10px 20px;
-    width: 100%;
+    top: 2.5rem;
+    left: 0;
+    background: linear-gradient(135deg, #101020, #1a1a2e);
+    padding: 0.5rem 0;
+    border-radius: 8px;
+    display: none; /* Hidden by default */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);
+    animation: dropdownSlide 0.4s ease-in-out;
+    min-width: 180px;
     z-index: 1000;
 }
 
+/* Ensure dropdown items are properly spaced */
+.dropdown-menu li {
+    margin: 0;
+}
+
+/* Dropdown link styling */
+.dropdown-menu a {
+    display: block;
+    padding: 0.5rem 1rem;
+    color: #fff;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+}
+
+/* Hover effect for dropdown links */
+.dropdown-menu a:hover {
+    background-color: #1f4068;
+    color: #ffd700;
+    border-radius: 4px;
+}
+
+/* Animation for dropdown */
+@keyframes dropdownSlide {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.navbar {
+    background: linear-gradient(90deg, #1a1a2e, #16213e, #0f3460);
+    color: #fff;
+    padding: 1rem;
+    font-family: 'Arial', sans-serif;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    position: fixed;         /* Fix the navbar at the top */
+    top: 0;                  /* Ensure it stays at the top */
+    left: 0;
+    width: 100%;   
+    z-index: 1000; /* Ensures it's above other content */
+}
+
+/* Add padding to body to prevent content from hiding behind navbar */
+
+
+
+/* Navbar list items */
 .navbar ul {
     display: flex;
     list-style: none;
+    justify-content: center;
+    align-items: center;
     margin: 0;
-    width: 100%;
-    justify-content: space-evenly;
+    padding: 0;
 }
 
 .navbar ul li {
-    margin-left: 20px;
-    flex: 1;
-    text-align: center;
     position: relative;
+    margin: 0 1.5rem;
 }
 
-.navbar ul li a {
+.navbar a {
     text-decoration: none;
-    color: #ffffff;
-    font-size: 1.2rem;
-    text-transform: uppercase;
-    padding: 10px 0;
-    display: block;
-    transition: color 0.3s ease, background-color 0.3s ease;
+    color: #e0e0e0;
+    padding: 0.5rem;
+    font-size: 1rem;
+    transition: all 0.3s ease;
 }
 
-.navbar ul li a:hover {
-    color: #2563eb;
-    background-color: rgba(255, 255, 255, 0.2);
-    padding: 5px 10px;
-    border-radius: 5px;
-}
-
-.navbar ul li .dropdown {
-    display: none;
-    position: absolute;
-    top: 40px;
-    left: 0;
-    background-color: #121212;
-    padding: 10px 0;
-    list-style: none;
-    width: 200px;
-}
-
-.navbar ul li:hover .dropdown {
-    display: block;
-}
-
-.navbar ul li .dropdown li {
-    text-align: left;
-    padding: 10px;
-}
-
-.navbar ul li .dropdown li a {
-    color: #ffffff;
-    font-size: 1.1rem;
-    padding: 10px;
-}
-
-.navbar ul li .dropdown li a:hover {
-    background-color: rgba(255, 255, 255, 0.2);
-    color: #2563eb;
+/* Hover effect with scale and color change */
+.navbar a:hover {
+    color: #ffd700;
+    transform: scale(1.1);
 }
 
 section {
@@ -182,11 +209,111 @@ button:hover, .cta-button:hover, .highlight-button:hover {
     box-shadow: 0 0 20px 8px rgba(60, 120, 240, 0.7);
 }
 
-footer {
-    margin-top: 50px;
+.content {
+    flex: 1;
     padding: 20px;
-    background-color: #000000;
-    color: #8e24aa;
-    text-align: center;
+}
+
+footer {
+    background-color: #000000; 
+    color: #ffffff;
+    padding: 40px 20px;
     width: 100%;
+    
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    max-width: 1700px;
+    margin: 0 auto;
+}
+
+.footer-column {
+    flex: 1;
+    min-width: 200px;
+    margin: 10px 20px;
+}
+
+.footer-column h4 {
+    color: #0099ff;
+    margin-bottom: 15px;
+    font-size: 16px;
+}
+
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-column ul li {
+    margin-bottom: 10px;
+}
+
+.footer-column ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.footer-column ul li a:hover {
+    text-decoration: underline;
+    color: #0099ff;
+}
+
+.footer-social {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.footer-social a {
+    display: inline-block;
+    color: #ffffff;
+    font-size: 18px;
+    width: 35px;
+    height: 35px;
+    text-align: center;
+    line-height: 35px;
+    background-color: #0099ff;
+    border-radius: 50%;
+    text-decoration: none;
+}
+
+.footer-social a:hover {
+    background-color: #0099ff;
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 30px;
+    border-top: 1px solid #4a5a6a;
+    padding-top: 20px;
+    font-size: 14px;
+    color: #b0b0b0;
+}
+
+.footer-bottom a {
+    color: #0099ff;
+    text-decoration: none;
+}
+
+.footer-bottom a:hover {
+    text-decoration: underline;
+}
+
+.contact-info {
+    color: #b0b0b0;
+    font-size: 14px;
+    margin-top: 20px;
+}
+
+.contact-info a {
+    color: #0099ff;
+    text-decoration: none;
+}
+
+.contact-info a:hover {
+    text-decoration: underline;
 }
